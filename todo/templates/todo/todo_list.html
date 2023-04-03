@@ -11,8 +11,12 @@
     <table>
         {% for item in items %}
             <tr>
-                <td>{{ item.name }}</td>
-                <td>{{ item.done }}</td>
+                {% if item.done %}
+                    <td><s>{{ item.name }}</s></td>
+                {% else %}
+                    <td>{{ item.name }}</td>
+                {% endif %}
+                
             </tr>
         {% endfor %}
     </table>
