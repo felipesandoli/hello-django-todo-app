@@ -16,9 +16,11 @@
                 {% else %}
                     <td>{{ item.name }}</td>
                 {% endif %}
-                
             </tr>
+            {% empty %}
+            <tr><td>You have nothing to do!</td></tr>
         {% endfor %}
     </table>
+    <a href="/add">Add an Item</a>
 </body>
 </html>
